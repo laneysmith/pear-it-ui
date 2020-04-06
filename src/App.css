@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #404040;
+}
+
+#root {
+  display: flex;
+  flex: 1;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 16px;
+  background: #b7ca50;
+  background: -webkit-linear-gradient(to right, #4fd065, #f79d00);
+  background: linear-gradient(to right, #b7ca50, #4fd065);
+  background: rgb(183, 202, 80);
+  background: linear-gradient(135deg, rgba(183, 202, 80, 1) 62%, rgba(79, 208, 101, 1) 100%);
+}
+
+.logo {
+  height: 80px;
+  position: relative;
+  top: 5px;
+}
+
+h2 {
+  font-weight: 400;
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: white;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 8px 16px;
+  background: #2e3943;
+  color: #efefef;
 }
 
-.App-link {
-  color: #61dafb;
+.github {
+  height: 24px;
+  width: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.pear-tree {
+  background-color: #efefef;
+  padding: 16px;
+  width: 250px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.options {
+  text-align: right;
+}
+
+.pear {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+}
+
+.pear-icon {
+  margin-right: 8px;
+  width: 12px;
+}
+
+.basket-container {
+  flex-basis: 100%;
+  margin: 8px;
+}
+
+@media screen and (min-width: 800px) {
+  .basket-container {
+    flex: 1;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.baskets {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.basket-label {
+  /* font-family: "Pacifico", cursive; */
+  /* font-weight: 400; */
+}
+
+.basket {
+  /* height: 550px;
+  flex-basis: 20%;
+  -ms-flex: auto;
+  width: 259px;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box; */
+
+  border-width: 2px;
+  border-radius: 16px;
+  border-style: solid;
+  /* margin: 8px; */
+  padding: 16px;
+  background: linear-gradient(45deg, #9e7f59 12%, transparent 0, transparent 88%, #9e7f59 0),
+    linear-gradient(135deg, transparent 37%, #916f49 0, #916f49 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #9e7f59 0, #9e7f59 63%, transparent 0), #7b5e3f;
+  background-size: 40px 40px;
+  min-height: 74px;
+}
+
+h3 {
+  margin-block-start: 0;
+  margin-block-end: 0.5em;
+}
+
+.btn {
+  background: #f5741e;
+  color: #efefef;
+  border: 0;
+  border-radius: 6px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  margin: 8px;
+  outline: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn--disabled {
+  background-color: #e87f3db0;
 }
